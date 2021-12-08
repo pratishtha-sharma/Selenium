@@ -1,0 +1,72 @@
+package myteam11pkg;
+
+import java.util.concurrent.TimeUnit;
+
+import javax.swing.JOptionPane;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.By;
+import org.openqa.selenium.NoAlertPresentException;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+
+public class myteam11 {
+
+	public static void main(String[] args) throws Exception {
+		// TODO Auto-generated method stub
+		
+		System.setProperty("webdriver.chrome.driver", "F:\\Automation work\\chromedriver_win32 (1)\\chromedriver.exe");
+		WebDriver driver = new ChromeDriver();
+		
+		driver.manage().window().maximize(); //maximize window
+		driver.manage().deleteAllCookies(); // delete all the cookies
+
+		driver.get("https://www.myteam11.com/fantasy-sports/landing");
+		driver.manage().timeouts().pageLoadTimeout(50, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+
+		//login
+		driver.findElement(By.xpath("//a[contains(text(),'Login')]")).click();
+		//driver.findElement(By.xpath("//input[@class='form-control ng-pristine ng-invalid filed-error ng-touched']")).sendKeys("8005648871");
+		driver.findElement(By.name("mobile")).sendKeys("8005648871");
+		Thread.sleep(3000);
+
+		//handle the alert
+		// driver.switchTo().alert().accept();
+		// Thread.sleep(1000);
+//		   try {
+//		       Alert alert = driver.switchTo().alert();
+//		       String alertText = alert.getText();
+//		       //System.out.println("Alert data: " + alertText);
+//		       alert.accept();
+//		   } catch (NoAlertPresentException e) {
+//		       e.printStackTrace();
+//		   }
+		//
+
+		//click on send otp button
+		driver.findElement(By.xpath("//button[contains(text(),'SEND OTP')]")).click();
+
+		//get otp
+		//prompting user to enter otp
+		/*JoptionPane pops up a standard dialog box and showInputDialog prompts user for
+		some input. Once the user enters the displayed captcha and clicks ‘OK’, it will be saved to the string “captchaVal”.*/
+		String otp = JOptionPane.showInputDialog("Please enter the otp value:");
+		//Type the entered otp to the text box
+		driver.findElement(By.xpath("//div[@class='otpBox']/div/input[@name='a']")).sendKeys(otp);
+		
+		//click on verify otp
+		driver.findElement(By.xpath("//button[contains(text(),'Verify OTP')]")).click();
+		
+		driver.findElement(By.xpath("//a[contains(text(),'Skip')]")).click();
+		
+		//click on first match
+		driver.findElement(By.xpath("//div[@class='match-data' and @data-step='3']/div[@class='matchinside']")).click();
+		Thread.sleep(2000);
+		driver.findElement(By.xpath("//span[contains(text(),'Create Team')]")).click();
+		driver.navigate().refresh();
+
+
+	}
+
+}

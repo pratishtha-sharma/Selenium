@@ -1,0 +1,79 @@
+package resources;
+
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+import java.util.concurrent.TimeUnit;
+
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
+
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+
+public class base {
+	
+	public WebDriver driver;
+	public Properties prop;
+	
+	public WebDriver setUpBrowser() throws IOException
+	{
+		prop = new Properties();
+		FileInputStream fis = new FileInputStream("F:\\E2EMavenProject\\src\\main\\java\\resources\\globalData.properties");
+		
+		prop.load(fis);
+		
+		//-D is treated as the system properties
+		//mvn test -Dbrowser=chrome //to pass the browser from maven when we run test from there.
+		//mvn test -Dbrowser="$browser" here this is used in jenkins when we provide goals in build environment, it will select the parameter that we select from dropwdown
+		//provide the dropdown list having browsername in "This project is parameterized -> Choice Parameter" $ indicates that browser is jenkins variable provided in parameter.
+		//String browserName = System.getProperty("browser"); //When we write this it will go to the above maven command to check the property name when we are using jenkins using maven
+		
+		String browserName = prop.getProperty("browser");
+		
+		if(browserName.equals("chrome")) //can not use == as it is used for reference comparision while .equals() is used for object comparision
+		{
+			System.setProperty("webdriver.chrome.driver", "F:\\Automation work\\chromedriver_win32 (1)\\chromedriver.exe");
+			driver = new ChromeDriver();
+		    //setDriver(new ChromeDriver());    //in case when we use driver variable defined as private here
+		}
+		else if(browserName.equals("firefox"))
+		{
+			System.setProperty("webdriver.gecko.driver", "F:\\Automation work\\geckodriver-v0.26.0-win64\\geckodriver.exe");
+			driver = new FirefoxDriver();
+			//setDriver(new FirefoxDriver());   //in case when we use driver variable defined as private here
+		}
+		
+		driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+		return driver;
+		
+		//return getDriver();
+	}
+	
+	//the driver object and the method name are being provided from the Listeners class
+	public String getScreenshotpath(String methodName, WebDriver driver) throws IOException
+	{
+		TakesScreenshot ts = (TakesScreenshot)driver;  //this driver defined here is just a variable but actual driver life is defined in particular testcase.
+		//From this driver it will not be known that we've to take screenshot of which browser that is opened
+		File source = ts.getScreenshotAs(OutputType.FILE);
+		String destinationFile = System.getProperty("user.dir")+"\\reports\\"+methodName+".png";
+		FileUtils.copyFile(source,new File(destinationFile));
+		return destinationFile;
+	}
+
+	//this is done incase the driver in this class is defined as private so that it could be used in other class, using getter and setter method.
+//	public WebDriver getDriver() {
+//		return driver;
+//	}
+//
+//	public void setDriver(WebDriver driver) {
+//		this.driver = driver;
+//	}
+	
+}	
+
+

@@ -1,0 +1,83 @@
+package practiceE2EProject;
+
+import java.io.IOException;
+import java.util.Properties;
+
+import org.openqa.selenium.WebDriver;
+import org.testng.annotations.AfterTest;
+import org.testng.annotations.BeforeTest;
+import org.testng.annotations.DataProvider;
+import org.testng.annotations.Test;
+
+import pageObjects.ForgotPassword;
+import pageObjects.LandingPage;
+import pageObjects.LoginPage;
+import resoruces.baseClass;
+
+public class HomePage extends baseClass {
+	
+	
+	public WebDriver driver;
+
+	
+  @BeforeTest
+  public void browserSetUp() throws Exception
+  {
+	  driver = setUpbrowser();
+	  driver.manage().window().maximize();
+  }
+
+  @Test(dataProvider="getData")
+  public void naviagtePage(String username, String password) throws IOException 
+  {
+	  String url = prop.getProperty("url");
+	  driver.get(url);
+	  //Landing Page
+	  LandingPage lp = new LandingPage(driver);
+	  LoginPage login = lp.Login();
+	  
+	  //Login page
+	  login.Email().sendKeys(username);
+	  login.Password().sendKeys(password);
+	  login.Submit().click();
+	  
+	  //Forgot Password Page
+	  ForgotPassword fp = login.forgotPass();
+	  fp.Email().sendKeys(username);
+	  fp.sendMeInstruction().click();
+	  
+	  
+	  
+  }
+  
+  @AfterTest
+  public void Teardown()
+  {
+	  driver.close();
+  }
+  
+  
+  @DataProvider
+  public Object[][] getData()
+  {
+	  //rows --> how many different data should run in whole test
+	  //column --> number of values sent per test
+	 
+  	
+	  Object[][] data = new Object[2][2];
+  	
+  	//first data
+  	data[0][0]= "nonrestricteduser@gmail.com";
+  	data[0][1]= "123456";
+  	
+  	//second row
+  	data[1][0]= "restricteduser@gmail.com";
+  	data[1][1]= "123456";  
+
+  	
+  	
+  	return data;
+  }
+  
+  
+}

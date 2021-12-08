@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
+<suite name="Suite">
+  <listeners>
+     <listener class-name="testpkg.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="Test">
+    <groups>
+      <run>
+        <exclude name = "Smoke"/> <!-- it will run all the test annotation that have been grouped using name Smoke -->
+      </run>
+    </groups>
+    <classes>
+      <class name="testpkg.testng1"/>
+      <class name="testpkg.testng2"/>
+      <class name="testpkg.testng3"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

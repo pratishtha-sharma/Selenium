@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete 4 elements from project &apos;DropDowns&apos;&#x0D;&#x0A;- Original project: &apos;DropDowns&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     e2e.java&#x0D;&#x0A;     SpiceJet.java&#x0D;&#x0A;     spicejet2.java&#x0D;&#x0A;     SpicejetPassenger1.java" description="Delete elements" element1="/src&lt;{spicejet2.java" element2="/src&lt;{SpicejetPassenger1.java" element3="/src&lt;{e2e.java" element4="/src&lt;{SpiceJet.java" elements="4" flags="589830" id="org.eclipse.jdt.ui.delete" resources="0" stamp="1589137708161" subPackages="false" version="1.0"/>
+</session>

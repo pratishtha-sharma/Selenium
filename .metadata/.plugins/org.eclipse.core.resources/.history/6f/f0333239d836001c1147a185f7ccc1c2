@@ -1,0 +1,12 @@
+package Stream;
+
+import org.testng.annotations.Test;
+
+public class Stream1 {
+	
+	@Test
+	public static void stream() {
+		
+	}
+
+}

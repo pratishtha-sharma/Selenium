@@ -1,0 +1,9 @@
+00:57:30.193 [main] ERROR pkg2.Demo1 - Hello I am an error
+00:57:30.205 [main] FATAL pkg2.Demo1 - Something is missing. It is fatal
+00:58:07.380 [main] DEBUG Demo - I have clicked the button
+00:58:07.383 [main] INFO  Demo - Button is clicked
+00:58:07.383 [main] ERROR Demo - Button is not getting clicked
+00:58:07.383 [main] FATAL Demo - Button object is missing
+01:20:50.999 [main] DEBUG example - Setting chrome driver property
+01:21:12.446 [main] INFO  example - Window Maximized
+01:21:12.446 [main] DEBUG example - Now hitting Amazon server
