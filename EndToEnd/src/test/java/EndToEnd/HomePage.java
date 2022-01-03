@@ -4,12 +4,19 @@ import java.io.IOException;
 
 import org.testng.annotations.Test;
 
+import com.google.common.base.Objects;
+
+import pageObject.pageObjectsHome;
+
 public class HomePage extends baseClass{
 
 	@Test
 	public void HomepageNavigation() throws IOException {
 		driver = openbrowserDriver();
-		driver.get("https://qaclickacademy.com/");
+		driver.get(prop.getProperty("url"));
+		
+		pageObjectsHome obj = new pageObjectsHome(driver);
+		obj.getLogin().click();
 	}
 	
 }

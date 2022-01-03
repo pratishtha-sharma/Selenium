@@ -13,10 +13,11 @@ public class baseClass {
 	
 	
 	public WebDriver driver;
+	public Properties prop;
 
 	public WebDriver openbrowserDriver() throws IOException {
 		
-		Properties prop = new Properties();
+		prop = new Properties();
 		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\EndToEnd\\values.properties");
 		
 		prop.load(fis);

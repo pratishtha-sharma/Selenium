@@ -1,0 +1,19 @@
+package EndToEnd;
+
+import java.io.IOException;
+
+import org.testng.annotations.Test;
+
+import com.google.common.base.Objects;
+
+public class HomePage extends baseClass{
+
+	@Test
+	public void HomepageNavigation() throws IOException {
+		driver = openbrowserDriver();
+		driver.get("https://qaclickacademy.com/");
+		
+		Objects obj = new Objects(driver);
+	}
+	
+}

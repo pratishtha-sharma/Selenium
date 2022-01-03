@@ -1,0 +1,19 @@
+package EndToEnd;
+
+import java.io.IOException;
+
+import pageObject.pageObjectsHome;
+import pageObject.pageObjectsLogin;
+
+public class LoginPage extends baseClass {
+	
+	@Test
+	public void LandingPage() throws IOException {
+		driver = openbrowserDriver();
+		driver.get("url");
+		
+		pageObjectsLogin obj = new pageObjectsLogin(driver);
+		obj.getTitle().getText();
+	}
+
+}
