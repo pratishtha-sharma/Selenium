@@ -1,6 +1,8 @@
 package EndToEnd;
 
 import java.io.IOException;
+
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
 import junit.framework.Assert;
@@ -14,13 +16,19 @@ public class LoginPage extends baseClass {
 		driver.get(prop.getProperty("url"));
 		
 		pageObjectsLogin obj = new pageObjectsLogin(driver);
+				
+		//verify the nav bar
+		Assert.assertTrue(obj.getNavBar().isDisplayed());
 		
 		//get title
 		String text = obj.getTitle().getText();
-		Assert.assertEquals("Featured Courses", text);
+		Assert.assertEquals("Featured Courses123", text);
+	}
+	
+	@AfterTest
+	public void closeBrowser() {
+		driver.close();
 		
-		//verify the nav bar
-		Assert.assertTrue(obj.getNavBar().isDisplayed());
 	}
 
 }

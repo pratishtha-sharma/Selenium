@@ -2,9 +2,8 @@ package EndToEnd;
 
 import java.io.IOException;
 
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
-
-import com.google.common.base.Objects;
 
 import pageObject.pageObjectsHome;
 
@@ -17,6 +16,14 @@ public class HomePage extends baseClass{
 		
 		pageObjectsHome obj = new pageObjectsHome(driver);
 		obj.getLogin().click();
+		
+		
+	}
+	
+	@AfterTest
+	public void closeBrowser() {
+		driver.close();
+		
 	}
 	
 }
