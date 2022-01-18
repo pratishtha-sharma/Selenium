@@ -6,6 +6,7 @@
       <class name="EndToEnd.HomePage">
         <methods>
           <include name="HomepageNavigation"/>
+          <include name="closeBrowser"/>
         </methods>
       </class> <!-- EndToEnd.HomePage -->
     </classes>

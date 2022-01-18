@@ -10,7 +10,7 @@ public class ExtentReportClass {
 	static ExtentReports reports;
 	
 	public static ExtentReports getReportObject() {
-		String path = System.getProperty("user.dir")+"\\reports\\index.html";
+		String path = System.getProperty("user.dir")+"\\reports\\report.html";
 		
 		ExtentSparkReporter sr = new ExtentSparkReporter(path);
 		sr.config().setReportName("Web Automation Status Report for pass/fail");

@@ -45,10 +45,12 @@ public class baseClass {
 		return driver;
 	}
 	
-	public void getScreenshotPath(String failedCase, WebDriver driver) throws IOException {
+	public String getScreenshotPath(String failedCase, WebDriver driver) throws IOException {
 		TakesScreenshot ss = (TakesScreenshot)driver;
 		File src = ss.getScreenshotAs(OutputType.FILE);
 		String destination = System.getProperty("user.dir")+"\\reports\\"+failedCase+".png";
-		FileUtils.copyFile(src, new File(""));
+		FileUtils.copyFile(src, new File(destination));
+		
+		return destination;
 	}
 }

@@ -1,13 +1,17 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
-  <test thread-count="5" name="Test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <listeners>
+    <listener class-name="EndToEnd.Listeners"/>
+  </listeners>
+  <test thread-count="5" name="Test1(failed)" parallel="tests">
     <classes>
-      <class name="EndToEnd.HomePage">
+      <class name="EndToEnd.LoginPage">
         <methods>
-          <include name="HomepageNavigation"/>
+          <include name="LandingPage"/>
+          <include name="closeBrowser"/>
         </methods>
-      </class> <!-- EndToEnd.HomePage -->
+      </class> <!-- EndToEnd.LoginPage -->
     </classes>
-  </test> <!-- Test(failed) -->
+  </test> <!-- Test1(failed) -->
 </suite> <!-- Failed suite [Suite] -->

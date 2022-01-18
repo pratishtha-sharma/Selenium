@@ -19,7 +19,7 @@
     <!--  <Logger name="pkg2.Demo1" level="error" additivity="false">
       <AppenderRef ref="File"/>
     </Logger>  -->
-    <Root level="trace">
+    <Root level="error">
       <AppenderRef ref="File"/>
     </Root>
   </Loggers>

@@ -2,6 +2,8 @@ package EndToEnd;
 
 import java.io.IOException;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.annotations.AfterTest;
 import org.testng.annotations.Test;
 
@@ -9,6 +11,8 @@ import junit.framework.Assert;
 import pageObject.pageObjectsLogin;
 
 public class LoginPage extends baseClass {
+	
+	public static Logger log = LogManager.getLogger(baseClass.class.getName());
 	
 	@Test
 	public void LandingPage() throws IOException {
@@ -22,7 +26,8 @@ public class LoginPage extends baseClass {
 		
 		//get title
 		String text = obj.getTitle().getText();
-		Assert.assertEquals("Featured Courses123", text);
+		Assert.assertEquals("FEATURED COURSES11", text);
+		log.error("This is an error");
 	}
 	
 	@AfterTest
