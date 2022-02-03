@@ -23,11 +23,15 @@ public class LoginPage extends baseClass {
 				
 		//verify the nav bar
 		Assert.assertTrue(obj.getNavBar().isDisplayed());
+		log.info("Nav bar is displayed");
 		
 		//get title
 		String text = obj.getTitle().getText();
+		
 		Assert.assertEquals("FEATURED COURSES11", text);
-		log.error("This is an error");
+		
+		log.warn("Error has occured with title");
+		
 	}
 	
 	@AfterTest

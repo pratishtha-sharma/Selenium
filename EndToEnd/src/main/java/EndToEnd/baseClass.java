@@ -25,7 +25,15 @@ public class baseClass {
 		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\EndToEnd\\values.properties");
 		
 		prop.load(fis);
-		String browsername = prop.getProperty("browser");
+		
+		
+		//-D is treated as the system properties
+		//mvn test -Dbrowser=chrome //to pass the browser from maven when we run test from there.
+		//mvn test -Dbrowser="$browser" here this is used in jenkins when we provide goals in build environment, it will select the parameter that we select from dropwdown
+		//provide the dropdown list having browsername in "This project is parameterized -> Choice Parameter" $ indicates that browser is jenkins variable provided in parameter.
+				
+		//String browsername = System.getProperty("browser"); //When we write this it will go to the above maven command to check the property name when we are using jenkins using maven
+		String browsername = prop.getProperty("browser");  //provide this when using eclipse
 		
 		if(browsername.equals("chrome")) {
 			System.setProperty("webdriver.chrome.driver", "F:\\Automation work\\chromedriver_win32 (1)\\chromedriver.exe");
