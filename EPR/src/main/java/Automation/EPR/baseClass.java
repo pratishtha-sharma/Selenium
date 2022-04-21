@@ -24,13 +24,13 @@ public class baseClass {
 		String browserName = prop.getProperty("browser");
 		
 		if(browserName.contains("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "F:\\Automation work\\chromedriver_win32 (1)\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", prop.getProperty("chromedriver"));
 			driver = new ChromeDriver();
 			driver.manage().window().maximize();
 			driver.manage().deleteAllCookies();
 		}
 		else if(browserName.contains("firefox")) {
-			System.setProperty("webdriver.gecko.driver", "F:\\Automation work\\geckodriver-win64\\geckodriver.exe");
+			System.setProperty("webdriver.gecko.driver", prop.getProperty("geckodriver"));
 			driver = new FirefoxDriver();
 			driver.manage().window().maximize();
 			driver.manage().deleteAllCookies();
