@@ -1,21 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-04-21T18:35:56 IST" name="Default suite" finished-at="2022-04-21T18:37:10 IST" duration-ms="74216">
+  <suite name="Suite" duration-ms="102497" started-at="2022-05-19T01:30:20 IST" finished-at="2022-05-19T01:32:02 IST">
     <groups>
     </groups>
-    <test started-at="2022-04-21T18:35:56 IST" name="Default test" finished-at="2022-04-21T18:37:10 IST" duration-ms="74216">
+    <test name="Test" duration-ms="102497" started-at="2022-05-19T01:30:20 IST" finished-at="2022-05-19T01:32:02 IST">
+      <class name="Automation.EPR.addNewPatient">
+        <test-method status="PASS" signature="addPatient()[pri:2, instance:Automation.EPR.addNewPatient@3b2da18f]" name="addPatient" duration-ms="30767" started-at="2022-05-19T01:31:31 IST" finished-at="2022-05-19T01:32:02 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- addPatient -->
+      </class> <!-- Automation.EPR.addNewPatient -->
       <class name="Automation.EPR.login">
-        <test-method is-config="true" signature="initialize()[pri:0, instance:Automation.EPR.login@5e21e98f]" started-at="2022-04-21T18:35:56 IST" name="initialize" finished-at="2022-04-21T18:36:02 IST" duration-ms="6166" status="PASS">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:Automation.EPR.login@3ee0fea4]" name="initialize" is-config="true" duration-ms="4834" started-at="2022-05-19T01:30:20 IST" finished-at="2022-05-19T01:30:24 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- initialize -->
-        <test-method signature="loginEPR()[pri:0, instance:Automation.EPR.login@5e21e98f]" started-at="2022-04-21T18:36:02 IST" name="loginEPR" finished-at="2022-04-21T18:37:10 IST" duration-ms="67991" status="PASS">
+        <test-method status="PASS" signature="loginEPR()[pri:1, instance:Automation.EPR.login@3ee0fea4]" name="loginEPR" duration-ms="66348" started-at="2022-05-19T01:30:24 IST" finished-at="2022-05-19T01:31:31 IST">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginEPR -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:Automation.EPR.login@3ee0fea4]" name="afterTest" is-config="true" duration-ms="497" started-at="2022-05-19T01:32:02 IST" finished-at="2022-05-19T01:32:02 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
       </class> <!-- Automation.EPR.login -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

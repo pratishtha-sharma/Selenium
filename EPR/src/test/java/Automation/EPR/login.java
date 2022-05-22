@@ -2,6 +2,7 @@ package Automation.EPR;
 
 import java.io.IOException;
 
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
@@ -23,7 +24,7 @@ public class login extends baseClass {
 		
 	}
 	
-	@Test
+	@Test(priority=1)
 	public void loginEPR() throws InterruptedException {
 		
 		String link = prop.getProperty("url");
@@ -48,9 +49,13 @@ public class login extends baseClass {
 		test = reports.createTest("initialDemo");
 		test.pass("Passed");
 		
+		
+		
+	}
+	
+	@AfterTest
+	public void afterTest() {
 		reports.flush();
-		
-		
 	}
 
 }

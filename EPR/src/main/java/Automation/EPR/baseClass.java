@@ -12,10 +12,10 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 
 public class baseClass {
 	
-	Properties prop;
-	WebDriver driver;
+	static Properties prop;
+	static WebDriver driver;
 	
-	public WebDriver openBrowser() throws IOException {
+	public static WebDriver openBrowser() throws IOException {
 		
 		prop = new Properties();
 		FileInputStream fis = new FileInputStream(System.getProperty("user.dir")+"\\src\\main\\java\\Automation\\EPR\\values.properties");

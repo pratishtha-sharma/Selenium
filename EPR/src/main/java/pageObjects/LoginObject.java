@@ -1,6 +1,5 @@
 package pageObjects;
 
-import java.util.List;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -14,27 +13,27 @@ public class LoginObject {
         this.driver = driver;
 	}
 	
-	By username = By.id("Email");
+	private By username = By.id("Email");
 	public WebElement Email() {
 		return driver.findElement(username);
 	}
 	
-	By password = By.id("Password");
+	private By password = By.id("Password");
 	public WebElement Password() {
 		return driver.findElement(password);
 	}
 	
-	By submit = By.id("btn-login");
+	private By submit = By.id("btn-login");
 	public WebElement SignIn() {
 		return driver.findElement(submit);
 	}
 	
-	By confirm = By.xpath("//div[contains(text(),'Confirmation')]");
+	private By confirm = By.xpath("//div[contains(text(),'Confirmation')]");
 	public WebElement Hippa(){
 		return driver.findElement(confirm);	
 	}
 	
-	By ok = By.xpath("//button[contains(text(),'OK')]");
+	private By ok = By.xpath("//button[contains(text(),'OK')]");
 	public WebElement closeHippa(){
 		return driver.findElement(ok);	
 	}
