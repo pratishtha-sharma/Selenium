@@ -13,6 +13,11 @@ public class LoginObject {
         this.driver = driver;
 	}
 	
+	private By signout = By.xpath("//div[@class='head-dash-right ml-auto pull-right']//a[@class='log-link']");
+	public WebElement Logout() {
+		return driver.findElement(signout);
+	}
+	
 	private By username = By.id("Email");
 	public WebElement Email() {
 		return driver.findElement(username);

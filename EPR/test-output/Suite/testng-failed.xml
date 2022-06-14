@@ -3,11 +3,11 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]">
   <test thread-count="5" name="Test(failed)">
     <classes>
-      <class name="Automation.EPR.addNewPatient">
+      <class name="Automation.EPR.scheduleAppointmentTest">
         <methods>
-          <include name="addPatient"/>
+          <include name="openNewWindow"/>
         </methods>
-      </class> <!-- Automation.EPR.addNewPatient -->
+      </class> <!-- Automation.EPR.scheduleAppointmentTest -->
     </classes>
   </test> <!-- Test(failed) -->
 </suite> <!-- Failed suite [Suite] -->

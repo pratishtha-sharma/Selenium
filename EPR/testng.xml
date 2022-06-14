@@ -3,8 +3,9 @@
 <suite name="Suite">
   <test thread-count="5" name="Test">
     <classes>
-      <class name="Automation.EPR.login"/>
-      <class name="Automation.EPR.addNewPatient"/>
+      <class name="Automation.EPR.loginTest"/>
+    <!--    <class name="Automation.EPR.addNewPatientTest"/> -->
+      <class name="Automation.EPR.scheduleAppointmentTest"/>
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

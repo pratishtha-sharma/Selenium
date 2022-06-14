@@ -17,7 +17,7 @@ WebDriver driver;
 	}
 	
 	//add new patient
-	@FindBy(xpath="//span[contains(text(),'Add New Animal')]")
+	@FindBy(xpath="//a[@id='addnewanimal']//span[contains(text(),'Add New Animal')]")
 	WebElement addNew;
 	public WebElement addNewPatient() {
 		return addNew;
