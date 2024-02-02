@@ -1,0 +1,27 @@
+# Created at 2024-01-15T13:17:20.579
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '[thread 6548 also had an error][thread 9452 also had an error]'.
+
+# Created at 2024-01-15T13:17:20.691
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '#'.
+
+# Created at 2024-01-15T13:17:20.695
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '# There is insufficient memory for the Java Runtime Environment to continue.'.
+
+# Created at 2024-01-15T13:17:20.701
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '# Native memory allocation (malloc) failed to allocate 32744 bytes for ChunkPool::allocate'.
+
+# Created at 2024-01-15T13:17:20.710
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '# An error report file with more information is saved as:'.
+
+# Created at 2024-01-15T13:17:20.717
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '# D:\eclipse\eclipse-workspace\MavenPracticePOM\hs_err_pid11128.log'.
+
+# Created at 2024-01-15T13:17:21.265
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '#'.
+
+# Created at 2024-01-15T13:17:21.271
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '# Compiler replay data is saved as:'.
+
+# Created at 2024-01-15T13:17:21.325
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '# D:\eclipse\eclipse-workspace\MavenPracticePOM\replay_pid11128.log'.
+
