@@ -1,7 +1,0 @@
-01:21:21.092 [main] INFO  example - Landed on amazon home page
-17:37:03.094 [main] DEBUG example1 - Setting up the chrome for selenium
-17:37:21.565 [main] INFO  example1 - Chrome has been opened.
-17:37:26.383 [main] DEBUG example1 - Hitting the amazon website.
-17:37:31.498 [main] INFO  example1 - Window has been maximized
-17:37:31.836 [main] DEBUG example1 - Entering data in search bar
-17:37:39.730 [main] INFO  example1 - Right click done

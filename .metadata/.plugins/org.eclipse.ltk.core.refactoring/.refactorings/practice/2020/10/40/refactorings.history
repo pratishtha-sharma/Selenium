@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy element &apos;Xls_Reader.java&apos; to &apos;LiveProject_BankingSite/src/bankingSite&apos;&#x0D;&#x0A;- Original project: &apos;practice&apos;&#x0D;&#x0A;- Destination element: &apos;LiveProject_BankingSite/src/bankingSite&apos;&#x0D;&#x0A;- Original element: &apos;XLReaderUtility.Xls_Reader.java&apos;" description="Copy compilation unit" destination="=LiveProject_BankingSite/src&lt;bankingSite" element1="/src&lt;XLReaderUtility{Xls_Reader.java" files="0" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1601694771271" units="1" version="1.0"/>
-</session>

@@ -1,3 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">&#x0A;<refactoring comment="Delete resource &apos;Frames and drag_drop&apos;" deleteContents="false" description="Delete resource &apos;Frames and drag_drop&apos;" element1="/Frames and drag_drop" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1588184305830"/>&#x0A;<refactoring comment="Delete resource &apos;DataDrivenExcel&apos;" deleteContents="false" description="Delete resource &apos;DataDrivenExcel&apos;" element1="/DataDrivenExcel" flags="7" id="org.eclipse.ltk.core.refactoring.delete.resources" resources="1" stamp="1588184520082"/>
-</session>

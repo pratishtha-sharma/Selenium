@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Copy element &apos;chromedriver.exe&apos; to &apos;DatabaseTesting/src/driverExe&apos;&#x0D;&#x0A;- Original project: &apos;E2EMavenProject&apos;&#x0D;&#x0A;- Destination element: &apos;DatabaseTesting/src/driverExe&apos;&#x0D;&#x0A;- Original element: &apos;chromedriver.exe&apos;" description="Copy file" destination="=DatabaseTesting/src&lt;driverExe" element1="src/main/java/resources/chromedriver.exe" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1593489585806" units="0" version="1.0"/>
-</session>

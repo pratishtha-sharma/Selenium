@@ -1,9 +1,0 @@
-08:34:30.036 [main] ERROR Log4j2Tutorial - I am an error
-08:34:30.104 [main] FATAL Log4j2Tutorial - This is a fatal error
-08:34:30.105 [main] INFO  Log4j2Tutorial - This is an info object
-08:34:54.376 [main] DEBUG Log4j2Tutorial - I am debuggig
-08:34:54.379 [main] ERROR Log4j2Tutorial - I am an error
-08:34:54.379 [main] FATAL Log4j2Tutorial - This is a fatal error
-08:34:54.379 [main] INFO  Log4j2Tutorial - This is an info object
-08:35:53.421 [main] DEBUG Demo - I am debuggig
-08:35:53.424 [main] ERROR Demo - I am an error
