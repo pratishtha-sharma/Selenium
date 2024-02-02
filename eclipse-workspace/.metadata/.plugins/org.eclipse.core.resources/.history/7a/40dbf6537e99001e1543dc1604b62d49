@@ -1,0 +1,85 @@
+package com.MavenPractice;
+
+import java.time.Duration;
+import java.util.List;
+
+//import org.apache.logging.log4j.core.Logger;
+import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
+import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.interactions.Actions;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+import org.slf4j.Logger;
+import org.testng.Assert;
+
+import Ecomm.pageObjects.CartPage;
+import Ecomm.pageObjects.CheckoutPage;
+import Ecomm.pageObjects.LandingPage;
+import Ecomm.pageObjects.ProductCatalogPage;
+import io.github.bonigarcia.wdm.WebDriverManager;
+
+public class SubmitOrderTest {
+
+	public static void main(String[] args) throws InterruptedException {
+		// TODO Auto-generated method stub
+		
+
+		WebDriverManager.chromedriver().setup();
+		WebDriver driver = new ChromeDriver();
+		driver.manage().window().maximize();
+		
+		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
+		//Landing Page
+		LandingPage lp = new LandingPage(driver);
+		lp.goTo();
+		ProductCatalogPage productPage = lp.loginIntoWeb("pratishtha@mailinator.com", "Welcome@123");
+		
+
+		String productName = "ADIDAS ORIGINAL"; 
+		Thread.sleep(2000);
+		String URL = driver.getCurrentUrl();
+		// String ExpectedTitle =
+		// "https://rahulshettyacademy.com/client/dashboard/dash";
+		Assert.assertEquals(URL, "https://rahulshettyacademy.com/client/dashboard/dash");
+		System.out.println("Expected URL is matched with actual URL");
+
+		
+		// Add element to cart(ProductCatalog)
+		//we have added object of ProductCatalogPage in LandingPage so no need to create the object again
+		
+		//add product to cart
+		CartPage cartPage = productPage.addProductToCart(productName);
+		System.out.println("Item added to cart");
+		
+		//click on cart
+		productPage.goToCart();
+		
+		// Verify the product name on cart page
+		//CartPage cartPage = new CartPage(driver);
+		Boolean matchedItem = cartPage.matchItemsWithCartList(productName);
+		Assert.assertTrue(matchedItem);
+		
+		CheckoutPage checkOutPage = cartPage.clickCheckout();
+		
+		// Entering and selecting value in country dropdown **********************
+		checkOutPage.enterCountryName();
+		
+		// select value in dropdown
+		checkOutPage.selectCountry();
+		Thread.sleep(3000);
+
+		// click on place order
+		checkOutPage.placeOrder();
+
+		String actual = driver.findElement(By.cssSelector(".hero-primary")).getText();
+		String expected = "THANKYOU FOR THE ORDER.";
+		Assert.assertEquals(expected, actual);
+
+		// driver.close(); sometimes getting connection reset error while using this
+	}
+
+}

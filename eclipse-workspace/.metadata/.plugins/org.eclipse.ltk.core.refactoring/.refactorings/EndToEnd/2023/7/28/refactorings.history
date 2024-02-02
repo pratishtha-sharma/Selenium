@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Copy 2 elements to &apos;Actions/src/main/java/Actions.Class&apos;&#x0D;&#x0A;- Original project: &apos;EndToEnd&apos;&#x0D;&#x0A;- Destination element: &apos;Actions/src/main/java/Actions.Class&apos;&#x0D;&#x0A;- Original elements:&#x0D;&#x0A;     EndToEnd.baseClass.java&#x0D;&#x0A;     values.properties" description="Copy elements" destination="=Actions/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;Actions.Class" element1="src/main/java/EndToEnd/values.properties" element2="/src\/main\/java=/optional=/true=/=/maven.pomderived=/true=/&lt;EndToEnd{baseClass.java" files="1" flags="589830" folders="0" id="org.eclipse.jdt.ui.copy" policy="org.eclipse.jdt.ui.copyResources" stamp="1689074462675" units="1" version="1.0"/>
+</session>

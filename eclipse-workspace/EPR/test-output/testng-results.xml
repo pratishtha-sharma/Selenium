@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results skipped="0" failed="0" ignored="0" total="2" passed="2">
+  <reporter-output>
+  </reporter-output>
+  <suite name="Suite" duration-ms="30649" started-at="2022-06-15T01:23:23 IST" finished-at="2022-06-15T01:23:54 IST">
+    <groups>
+    </groups>
+    <test name="Test" duration-ms="30649" started-at="2022-06-15T01:23:23 IST" finished-at="2022-06-15T01:23:54 IST">
+      <class name="Automation.EPR.loginTest">
+        <test-method status="PASS" signature="initialize()[pri:0, instance:Automation.EPR.loginTest@3ee0fea4]" name="initialize" is-config="true" duration-ms="5932" started-at="2022-06-15T01:23:23 IST" finished-at="2022-06-15T01:23:29 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- initialize -->
+        <test-method status="PASS" signature="loginEPR()[pri:1, instance:Automation.EPR.loginTest@3ee0fea4]" name="loginEPR" duration-ms="8036" started-at="2022-06-15T01:23:29 IST" finished-at="2022-06-15T01:23:37 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginEPR -->
+        <test-method status="PASS" signature="afterTest()[pri:0, instance:Automation.EPR.loginTest@3ee0fea4]" name="afterTest" is-config="true" duration-ms="678" started-at="2022-06-15T01:23:53 IST" finished-at="2022-06-15T01:23:54 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTest -->
+      </class> <!-- Automation.EPR.loginTest -->
+      <class name="Automation.EPR.scheduleAppointmentTest">
+        <test-method status="PASS" signature="openNewWindow()[pri:3, instance:Automation.EPR.scheduleAppointmentTest@3b2da18f]" name="openNewWindow" duration-ms="15927" started-at="2022-06-15T01:23:37 IST" finished-at="2022-06-15T01:23:53 IST">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- openNewWindow -->
+      </class> <!-- Automation.EPR.scheduleAppointmentTest -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
+</testng-results>

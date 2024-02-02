@@ -1,0 +1,15 @@
+# Created at 2024-01-15T13:18:49.734
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '#'.
+
+# Created at 2024-01-15T13:18:49.740
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '# There is insufficient memory for the Java Runtime Environment to continue.'.
+
+# Created at 2024-01-15T13:18:49.744
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '# Native memory allocation (mmap) failed to map 201326592 bytes for Failed to commit area from 0x0000000741c00000 to 0x000000074dc00000 of length 201326592.'.
+
+# Created at 2024-01-15T13:18:49.753
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '# An error report file with more information is saved as:'.
+
+# Created at 2024-01-15T13:18:49.825
+Corrupted channel by directly writing to native stream in forked JVM 1. Stream '# D:\eclipse\eclipse-workspace\MavenPracticePOM\hs_err_pid9348.log'.
+
