@@ -1,4 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<session version="1.0">
-<refactoring comment="Rename type &apos;testt.duplicateChara&apos; to &apos;duplicateCharacter&apos;&#x0D;&#x0A;- Original project: &apos;JavaTest&apos;&#x0D;&#x0A;- Original element: &apos;testt.duplicateChara&apos;&#x0D;&#x0A;- Renamed element: &apos;testt.duplicateCharacter&apos;&#x0D;&#x0A;- Update references to refactored element&#x0D;&#x0A;- Update textual occurrences in comments and strings" description="Rename type &apos;duplicateChara&apos;" flags="589830" id="org.eclipse.jdt.ui.rename.type" input="/src&lt;testt{duplicateChara.java[duplicateChara" matchStrategy="1" name="duplicateCharacter" qualified="false" references="true" similarDeclarations="false" stamp="1705902643707" textual="false" version="1.0"/>
-</session>
