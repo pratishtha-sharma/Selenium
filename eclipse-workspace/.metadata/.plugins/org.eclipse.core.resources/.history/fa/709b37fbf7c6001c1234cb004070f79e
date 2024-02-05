@@ -1,0 +1,21 @@
+package Automation.EPR;
+
+import org.testng.annotations.Test;
+
+import pageObjects.addNewPatientObject;
+
+public class addNewPatient extends baseClass {
+
+	//<class name="Automation.EPR.addNewPatient"/>
+	@Test(priority=2)
+	public void addNew() throws InterruptedException {
+		Thread.sleep(2000);
+		//driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(60));
+		addNewPatientObject add = new addNewPatientObject(driver);
+		add.addAnimal().click();
+		Thread.sleep(2000);
+		
+		
+		add.confirmAdd().click();
+	}
+}
