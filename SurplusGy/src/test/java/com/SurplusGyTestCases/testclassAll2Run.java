@@ -1,5 +1,7 @@
 package com.SurplusGyTestCases;
 import org.testng.annotations.Test;
+import org.testng.AssertJUnit;
+import org.testng.annotations.Test;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert; 
 import org.testng.annotations.DataProvider;
@@ -30,7 +32,7 @@ public class testclassAll2Run extends BaseClassSurplus {
 		//verify the success message on dashboard
 		String actual = db.loginSuccessMsg();
 		String expected = "Login successfully.";
-		Assert.assertEquals(expected, actual);
+		AssertJUnit.assertEquals(expected, actual);
 		System.out.println("Text correct");
 		
 	}
@@ -51,7 +53,7 @@ public class testclassAll2Run extends BaseClassSurplus {
 		//message should be shown when we click on cart without selecting variant
 		String actual = pd.errorMsg();
 		String expected = "Select all variant";
-		Assert.assertEquals(expected, actual);
+		AssertJUnit.assertEquals(expected, actual);
 		Thread.sleep(1000);
 		//select variant and click on add to cart
 		//pd.selectVariant(variant);
@@ -63,11 +65,11 @@ public class testclassAll2Run extends BaseClassSurplus {
 		softAssert = new SoftAssert(); 
 		//Assert.assertTrue(val);// need to add soft alert here
 		if (val == true) { // when product added
-			softAssert.assertTrue(val);
+			AssertJUnit.assertTrue(val);
 			softAssert.assertAll();
 			System.out.println("True condition achieved, product added"); 
 		} else if(val == false) {
-			softAssert.assertFalse(val);
+			AssertJUnit.assertFalse(val);
 			softAssert.assertAll();
 			System.out.println("False condition faced. Not able to add product");
 		}
@@ -94,11 +96,11 @@ public class testclassAll2Run extends BaseClassSurplus {
 		softAssert = new SoftAssert(); 
 		//Assert.assertTrue(val);// need to add soft alert here
 		if (val == true) {
-			softAssert.assertTrue(val);
+			AssertJUnit.assertTrue(val);
 			softAssert.assertAll();
 			System.out.println("Total amount matched");
 		} else if(val == false) {
-			softAssert.assertFalse(val);
+			AssertJUnit.assertFalse(val);
 			softAssert.assertAll();
 			System.out.println("Total amount did not match");
 		}
