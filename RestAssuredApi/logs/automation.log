@@ -1,0 +1,13 @@
+00:53:25.074 [main] INFO  Api.testCases.UserTests - This is used to create the user
+22:51:31.611 [main] INFO  Api.testCases.UserTests - This is used to create the user
+22:51:32.900 [main] INFO  Api.testCases.UserTests - This is used to get the user details
+22:51:35.362 [main] INFO  Api.testCases.UserTests - This is used to update the user
+22:51:36.658 [main] INFO  Api.testCases.UserTests - This is used to delete the user
+23:07:18.742 [main] INFO  Api.testCases.UserTests - This is used to create the user
+23:07:20.070 [main] INFO  Api.testCases.UserTests - This is used to get the user details
+23:07:22.795 [main] INFO  Api.testCases.UserTests - This is used to update the user
+23:07:24.201 [main] INFO  Api.testCases.UserTests - This is used to delete the user
+23:07:34.362 [main] INFO  Api.testCases.UserTests - This is used to create the user
+23:07:35.724 [main] INFO  Api.testCases.UserTests - This is used to get the user details
+23:07:38.475 [main] INFO  Api.testCases.UserTests - This is used to update the user
+23:07:39.885 [main] INFO  Api.testCases.UserTests - This is used to delete the user
