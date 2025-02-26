@@ -7,7 +7,10 @@
         <methods>
           <include name="addToCart"/>
           <include name="launchApplication"/>
-          <include name="signIn"/>
+          <include name="searchItemInSearchBar"/>
+          <include name="checkoutPage"/>
+          <include name="signIn" invocation-numbers="0"/>
+          <include name="addCartIconClick"/>
         </methods>
       </class> <!-- com.SurplusGyTestCases.testclassAll2Run -->
     </classes>

@@ -59,7 +59,7 @@ public class BaseClassSurplus {
 //			ChromeOptions options = new ChromeOptions();
 //			options.addArguments("headless");		
 			driver = new ChromeDriver();
-			driver.manage().window().maximize();
+			driver.manage().window().maximize(); 
 			//driver.manage().window().setSize(new Dimension(1440,900));//full screen
 			
 			driver.get("https://ecommercemarketplace.24livehost.com/");
@@ -84,22 +84,22 @@ public class BaseClassSurplus {
 
 	}
 	
-	public List<HashMap<String, String>> getJsonDataToMap(String filePath) throws IOException
-	{
-		//read json to string
-	String jsonContent = 	FileUtils.readFileToString(new File(filePath), 
-			StandardCharsets.UTF_8);
-	
-	//String to HashMap- Jackson Databind
-	
-	ObjectMapper mapper = new ObjectMapper();
-	  List<HashMap<String, String>> data = mapper.readValue(jsonContent, new TypeReference<List<HashMap<String, String>>>() {
-      });
-	  return data;
-	
-	//{map, map}
-
-	}
+//	public List<HashMap<String, String>> getJsonDataToMap(String filePath) throws IOException
+//	{
+//		//read json to string
+//	String jsonContent = 	FileUtils.readFileToString(new File(filePath), 
+//			StandardCharsets.UTF_8);
+//	
+//	//String to HashMap- Jackson Databind
+//	
+//	ObjectMapper mapper = new ObjectMapper();
+//	  List<HashMap<String, String>> data = mapper.readValue(jsonContent, new TypeReference<List<HashMap<String, String>>>() {
+//      });
+//	  return data;
+//	
+//	//{map, map}
+//
+//	}
 	
 	public String getScreenshot(String testCaseName,WebDriver driver) throws IOException
 	{

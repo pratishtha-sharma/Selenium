@@ -96,7 +96,7 @@ public class productDetailsPageObject extends AbstractClass {
 		if (isVisible) {
             System.out.println("The element is visible on the page."); // when product added successfully in cart.
         } else {
-            System.out.println("The element is not visible on the page.");// when faced any error while adding product to cart
+            System.out.println("The element is not visible on the page!!!");// when faced any error while adding product to cart
         }
 		
 		return isVisible; // this will return true or false
@@ -107,7 +107,7 @@ public class productDetailsPageObject extends AbstractClass {
 	@FindBy(xpath="(//i[@id='wishlist'])[1]") // wishlist not selected
 	WebElement wishlistNotSelected;
 	
-	@FindBy(css="i[id='wishlist'][class='fas fa-heart']") // wishlist selected i[id='wishlist'][style='color: red;']
+	@FindBy(css="i[id='wishlist'][class='fas fa-heart']") // wishlist selected $$("i[id='wishlist'][class='fas fa-heart'][style='color: red;']")
 	WebElement wishlistSelected;
 	
 	@FindBy(xpath="//div[contains(text(), 'Product added to wishlist successfully.')]")

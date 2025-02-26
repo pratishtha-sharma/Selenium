@@ -1,12 +1,10 @@
 package com.SurplusGyTestCases;
 import org.testng.annotations.Test;
-import org.testng.AssertJUnit;
-import org.testng.annotations.Test;
 import org.testng.Assert;
 import org.testng.asserts.SoftAssert; 
 import org.testng.annotations.DataProvider;
 
-
+import com.SurplusGy.PageObjects.checkoutPageObject;
 import com.SurplusGy.PageObjects.dashBoardPageObject;
 import com.SurplusGy.PageObjects.myCartPageObject;
 import com.SurplusGy.PageObjects.productDetailsPageObject;
@@ -19,6 +17,7 @@ public class testclassAll2Run extends BaseClassSurplus {
 	public productDetailsPageObject pd;
 	public myCartPageObject cart;
 	String variant ="M";
+	public checkoutPageObject cp;
 	
 	public SoftAssert softAssert;
 	
@@ -32,12 +31,12 @@ public class testclassAll2Run extends BaseClassSurplus {
 		//verify the success message on dashboard
 		String actual = db.loginSuccessMsg();
 		String expected = "Login successfully.";
-		AssertJUnit.assertEquals(expected, actual);
-		System.out.println("Text correct");
+		Assert.assertEquals(expected, actual);
+		System.out.println("Login Text correct");
 		
 	}
 	
-	//retryAnalyzer= Retry.class
+	//retryAnalyzer= Retry.class    ----- line to retry failed testcases
 	
 	@Test (priority = 2, dependsOnMethods = {"signIn"}) //testcase 2
 	public void searchItemInSearchBar() throws InterruptedException {
@@ -53,7 +52,8 @@ public class testclassAll2Run extends BaseClassSurplus {
 		//message should be shown when we click on cart without selecting variant
 		String actual = pd.errorMsg();
 		String expected = "Select all variant";
-		AssertJUnit.assertEquals(expected, actual);
+		System.out.println("Variant text correct");
+		Assert.assertEquals(expected, actual);
 		Thread.sleep(1000);
 		//select variant and click on add to cart
 		//pd.selectVariant(variant);
@@ -65,11 +65,11 @@ public class testclassAll2Run extends BaseClassSurplus {
 		softAssert = new SoftAssert(); 
 		//Assert.assertTrue(val);// need to add soft alert here
 		if (val == true) { // when product added
-			AssertJUnit.assertTrue(val);
+			softAssert.assertTrue(val);
 			softAssert.assertAll();
 			System.out.println("True condition achieved, product added"); 
 		} else if(val == false) {
-			AssertJUnit.assertFalse(val);
+			softAssert.assertFalse(val);
 			softAssert.assertAll();
 			System.out.println("False condition faced. Not able to add product");
 		}
@@ -96,11 +96,11 @@ public class testclassAll2Run extends BaseClassSurplus {
 		softAssert = new SoftAssert(); 
 		//Assert.assertTrue(val);// need to add soft alert here
 		if (val == true) {
-			AssertJUnit.assertTrue(val);
+			softAssert.assertTrue(val);
 			softAssert.assertAll();
 			System.out.println("Total amount matched");
 		} else if(val == false) {
-			AssertJUnit.assertFalse(val);
+			softAssert.assertFalse(val);
 			softAssert.assertAll();
 			System.out.println("Total amount did not match");
 		}
@@ -114,8 +114,10 @@ public class testclassAll2Run extends BaseClassSurplus {
 	
 	@Test (priority = 5, dependsOnMethods = {"signIn"}) //testcase 5
 	public void checkoutPage() {
+		cp = new checkoutPageObject(driver);
 		
-		
+		cp.addressDropdown();
+		cp.paymentDetails();
 		
 	}
 	

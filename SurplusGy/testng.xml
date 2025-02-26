@@ -1,14 +1,32 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
 <suite name="Suite">
-  <test thread-count="5" name="Test">
-    <classes>
-    <class name="com.SurplusGyTestCases.testclassAll2Run"/>
-      <!--<class name="com.SurplusGyTestCases.checkoutTest"/>
-      <class name="com.SurplusGyTestCases.productDetailsTest"/>
+	
+	<listeners>
+		<listener class-name="com.SurplusGyTestComponents.Listeners"></listener>
+	</listeners>
+	
+	<test thread-count="5" name="Test">
+		<classes>
+     <!-- <class name="com.SurplusGyTestCases.orderPageTest"/>
       <class name="com.SurplusGyTestCases.loginTest"/>
-      <class name="com.SurplusGyTestCases.myCartTest"/>
-      <class name="com.SurplusGyTestCases.dashBoardTest"/>  -->
+      <class name="com.SurplusGyTestCases.dashBoardTest"/> -->
+      <class name="com.SurplusGyTestCases.testclassAll2Run"/>
     </classes>
-  </test> <!-- Test -->
+
+		<!-- <classes>
+			<class name="com.SurplusGyTestCases.loginTest">
+				<methods>
+					<include name="signIn"/>
+				</methods>
+			</class> 
+			
+			<class name="com.SurplusGyTestCases.dashBoardTest">
+				<methods>
+					<include name="searchItemInSearchBar" depends-on="com.SurplusGyTestCasesloginTest.signIn"/>
+				</methods>
+			</class>
+			
+		</classes> -->
+	</test> <!-- Test -->
 </suite> <!-- Suite -->

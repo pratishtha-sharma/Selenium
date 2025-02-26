@@ -66,11 +66,12 @@ public class dashBoardPageObject extends AbstractClass {
 
 			// threadlocalrandom helps in selecting random data
 			int randomIndex = ThreadLocalRandom.current().nextInt(searchedItems.size()); 
-			System.out.println(randomIndex);
+			System.out.println("Index of randomly selected item is :" + randomIndex);
 			searchedItems.get(randomIndex).click();
 			Thread.sleep(2000);
 
 			String text = searchedItems.get(randomIndex).getText();
+			Thread.sleep(2000);
 
 			// also print the random value selected to verify
 			System.out.println("Selected item is: " + text);
